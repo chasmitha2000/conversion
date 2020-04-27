@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>conversion USD to INR</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='icon' type='image/png' href='images/icons/favicon1.ico' />
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script|PT+Mono&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='css/mystyle.css'>
+</head>
+
+<body>
+  <div class='mainbody'>
+    <div class='header'>
+      <h1>Conversion USD to INR</h1>
+    </div>
+    <div class='menu'> <a href='/logout' class='reference'>Logout</a> </div>
+    <div id='userLogin' style='margin-top : 0;' class='login-box'>
+      <form action='/converted' method='post'>
+        <div class='jumbotron'>
+
+          <% if (status === "success") { %>
+          <h1 class='display-4'>Converted successfully</h1>
+          <p class='lead'>$1 on <%= entered_date %> is Rs. <%= currency_inr %></p>
+          <hr class='my-4'>
+          <p>So, $ <%= enter_usd %> = Rs. <%= final_inr %> </p> <button class='btn btn-primary btn-lg' type='submit'>Back</button>
+          <% } else {%>
+
+          <h1 class='display-4'>Uh oh!</h1>
+          <p class='lead'>Invalid date</p>
+          <hr class='my-4'>
+          <p>but, Today $1 is Rs.  <%= currency_inr %> </p>
+          <button class='btn btn-warning btn-lg' type='submit'>Back</button>
+          <% } %>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

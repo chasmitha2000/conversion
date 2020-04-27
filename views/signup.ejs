@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>conversion USD to INR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icons/favicon1.ico" />
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="limiter">
+    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+      <div class="wrap-login100" id="loginForm" method="post">
+        <form class="login100-form validate-form" id="registrationForm" action="/signup" method="post">
+          <a href="/"> <img src="images/icons/back.png" height="40" width="40" align="left" style="margin-top: 22px"> </a>
+          <span class="login100-form-title p-b-34 p-t-27">
+            Signup
+          </span>
+
+          <br>
+
+          <div class="wrap-input100 validate-input" data-validate="Enter username">
+            <input class="input100" type="text" name="userName" id="userName" placeholder="Name" required="">
+            <span class="focus-input100" data-placeholder="&#xf207;"></span>
+          </div>
+
+
+          <br>
+
+          <div class="wrap-input100 validate-input" data-validate="Enter username">
+            <input class="input100" type="email" name="userMail" id="userMail" placeholder="Mail ID" required="">
+            <span class="focus-input100" data-placeholder="&#xf207;"></span>
+          </div>
+
+          <br>
+
+
+          <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <input class="input100" id="userPassword" type="password" placeholder="Password" name="userPassword" required="">
+            <span class="focus-input100" data-placeholder="&#xf191;"></span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" type="submit" name="siginup">
+              Signup
+            </button>
+
+            <% if (creating_user === "user_created") { %>
+            <script type='text/javascript'>
+              swal({
+                title: 'New User Created',
+                text: "Go back to the Login page and Login",
+                icon: 'success'
+              });
+            </script>
+            <% } else if (creating_user === "user_allready_exist") { %>
+            <script type='text/javascript'>
+              swal({
+                title: 'MAil ID already exist',
+                text: "Go back to the Login page and Login with the password you remember",
+                icon: 'warning'
+              });
+            </script>
+
+            <% } %>
+          </div>
+
+        </form>
+
+        <br>
+      </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+</body>
+
+</html>
